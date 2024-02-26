@@ -1,0 +1,533 @@
+* {
+    font-family: sans-serif, Arial, Helvetica;
+    box-sizing: border-box;
+  }
+  header{
+    width: 100%; height: 100vh;    
+  }
+  .section-grey {
+    background-color: #dee1e4;
+  }  
+  body {
+    background-color: #ffffff; font-family: sans-serif; font-size: 10px;
+    margin-top: 2%; margin-right: 2%; margin-left: 2%; margin: 0;
+    color: #121213d5; line-height: 15px; position: relative;    
+  }
+  main {
+    padding: 20px 20px 0 20px;
+  }  
+  #banner {
+    position: relative; padding-left: 8%; padding-right: 8%; height: 90vh;    
+    background-size: cover; background-color: #a0a3b1;
+    background-image: linear-gradient(
+        60deg,
+        rgba(187, 193, 223, 0.83) 70%,
+        rgba(155, 157, 163, 0.28) 30%),
+      url(https://nuuk-e3eaa.firebaseapp.com/assets/img/slide-2.jpg);
+    background-attachment: scroll;
+  }  
+  .banner-wrapper {
+    position: absolute; align-items: center; height: 70px; left: 0%; right: 0%; top: 0%; bottom: auto;
+    background-color: #fff; width: 80%; display: flex; margin-top: 2%; margin-right: auto;
+    margin-left: auto; padding-right: 0%; padding-left: 0%; justify-content: space-between;
+    z-index: 1000;
+  }
+  .logo {
+    width: 100%;
+  }
+  .nuuk {
+    cursor: pointer; display: inline-block; position: relative;
+    background-color: #ce7425; height: 100px; width: 120px; padding-left: 25px;
+    padding-right: 25px; text-align: center; display: flex;
+    justify-content: center; align-items: center; z-index: 1000; align-self: stretch;    
+  }  
+  .menu {
+    display: flex; position: relative;
+    align-items: center; align-self: stretch; order: 1;    
+  }  
+  .quote {
+    background-color: #c7630c; text-align: center; font-size: 10px; font-weight: 700;
+    color: white; margin-left: 10px; height: 100%; padding: 25px 20px 20px; order: 2;
+    letter-spacing: 2px; text-transform: uppercase; cursor: pointer; transition: all 300ms ease;    
+  }  
+  .quote:hover {
+    background-color: #ce8240;
+  }    
+  .nav-link {
+    padding: 25px 10px; font-size: 10px; font-weight: 800; text-transform: uppercase;
+    text-decoration: none; color: #6e6e79; letter-spacing: 2px; align-items: center;  
+    cursor: pointer; display: inline-block; justify-content: center; align-items: center;
+    position: relative; transition: 0.2s; max-width: 100%;     
+  }  
+  .nav-link:hover {
+    color: #e47312;
+  }
+  .nav-link:hover::before,
+  .nav-link:hover::after {
+    height: 40px;
+  }
+  .nav-link::before {
+    content: ""; background-color: #994f0e; margin-right: auto; margin-left: auto;
+    position: absolute; left: 0%; top: 0%; right: 0%; width: 2px; height: 0;     
+    transition: 0.3s;
+  }
+  .nav-link.w--current {
+    color: #d87117;
+  }  
+  .nav-link::after {
+    content: ""; background-color: #994f0e; margin-right: auto; margin-left: auto;
+    position: absolute; left: 0%; right: 0%; bottom: 0%; width: 2px; height: 0;
+    transition: 0.3s;    
+  }    
+  .nav-text {
+    position: relative; z-index: 1; padding-top: 3px; padding-bottom: 3px;    
+    background-color: #fff; text-transform: uppercase; display: inline-block;   
+  }  
+  .arrow {
+    margin-left: 5px; width: 12px;    
+  }  
+  .dropdown {
+    z-index: 700; display: inline-block;    
+  }  
+  .dropdown-link {
+    color: #1b1b1d; font-size: 10px; font-weight: 700; text-decoration: none;    
+    text-transform: uppercase; padding: 10px 10px; display: block;    
+  }
+  .dropdown:hover > .dropdown-list {
+    display: block; min-width: 200px; padding: 10px 10px;    
+  }  
+  .dropdown-list {
+    background-color: #fff; min-width: 150%; display: none;
+    position: absolute; width: 150px; z-index: 1;    
+  }      
+  .dropdown-link:hover {
+    background-color: #f1f1f7; color: #ec6409;    
+  }        
+  .first-content {
+    position: absolute; margin-top: 250px;
+  }  
+  .first-heading {
+    color: #fff; font-size: 60px; font-weight: 700; line-height: 80px;    
+    margin-top: 0; margin-bottom: 0; letter-spacing: 2px; text-transform: uppercase;    
+  }  
+  .caption {
+    font-weight: 500; margin-top: 15px; font-size: 25px; line-height: 30px;
+    margin-bottom: 8px; color: hsla(0, 0%, 100%, 0.781); margin-bottom: 60px;
+  } 
+  .social-media-icon {
+    width: 20px; margin-top: 20px;
+  }
+  .social-media-button-section {
+    position: absolute; background-color: #14265c; right: 0; bottom: 80px; z-index: 0; 
+    display: flex; flex-direction: column; justify-content: center; padding: 20px;    
+  }
+  .social-media-vertical-icon-link {
+    width: 50px; height: 70px;
+    border-bottom: 1px solid rgba(0, 0, 255, 0.007);
+    display: inline-block; text-align: center;
+  }  
+  .button:hover {
+    background-color: #7e5734;
+  } 
+  .button {
+    cursor: pointer; min-width: 130px; padding: 18px 30px; border: 0; outline: 0;
+    color: #fff; background-color: #e47312; font-weight: 500; text-decoration: none;
+    text-align: center; letter-spacing: 1px; transition: all 300ms ease; text-transform: uppercase;
+    text-align: center; font-size: 12px;    
+  }   
+  .contact-item {
+    display: inline-block; text-align: center;
+  }
+  .contact-section {
+    position: absolute; left: auto; right: 0; top: auto; bottom: -120px; width: 900px;
+    padding: 15px 50px 20px 100px; background-color: #e47312;
+    background-image: linear-gradient(186deg, #e47312, #ff6361);
+  }  
+  .contact-flex {
+    z-index: 1; justify-content: space-around; width: 100%; display: flex;    
+    padding-top: 10px; padding-bottom: 50px; align-items: flex-start;
+  }  
+  .contact-img {
+    width: 30px;
+  }  
+  .contact-info {
+    margin-bottom:5px; font-size: 15px; color: rgba(255, 255, 255, 0.781);
+  }
+  .contact {
+    margin-top: 0; margin-bottom: 10px; color: #fff; font-size: 15px;
+    line-height: 15px; letter-spacing: 1px;
+  }  
+  .map-button {
+    color: #fff; font-size: 10px; letter-spacing: 1px; font-weight: 600; text-decoration: none; 
+    text-transform: uppercase; display: inline-block; text-align: center; transition: 0.3s;
+  }    
+  #section-container {
+    margin-left: auto; margin-right: auto; margin-top: 100px; max-width: 1500px;     
+  }
+  
+  .specializations-wrapper {
+    justify-content: space-between; align-items: center; display: flex;    
+  }  
+  .first-heading {
+    font-size: 50px; color: #121213; margin-bottom: 0px; margin-top: 0px; position: relative;
+    line-height: 40px; letter-spacing: 2px;     
+  }  
+  .background-title {
+    font-size: 140px; letter-spacing: 10px; color: rgba(230, 230, 241, 0.4);    
+  }  
+  .hovered-button {
+    font-size: 15px; font-weight: 700; letter-spacing: 2px; color: #95959e; padding-bottom: 3px; 
+    text-decoration: none; max-width: 100%; display: inline-block; text-transform: uppercase;  
+  }  
+  .hovered-button.for-button {
+    position: relative;
+  }  
+  .hovered-button.for-button::after {
+    width: 100%; position: absolute; content: ""; bottom: 0; height: 1px;
+    color: #b35b0e; background-color: #e2e2ee;    
+  }  
+  .hovered-button:hover::after {
+    background-color: #ee750b;
+  }  
+  .services-wrapper {
+    justify-content: space-around; margin-top: 50px; display: flex;    
+  }  
+  .service-item {
+    padding-right: 3%; width: 30%; margin-bottom: 3%;    
+  }  
+  .service-image {
+    max-width: 100%; width: 40px; height: 40px; vertical-align: middle; margin-bottom: 15px;
+    display: inline-block;    
+  }  
+  .service-title {
+    font-weight: 700; font-size: 20px;
+  }  
+  .service {
+    margin-top: 0; margin-bottom: 20px; font-size: 20px; line-height: 20px; color: #626268;    
+  }  
+  .who-we-wrapper {
+    margin-top: 10%; align-items: flex-start; display: flex;    
+  }  
+  .worker-img-wrapper {
+    width: 50%;
+  }  
+  .worker-img {
+    width: 100%;
+  }  
+  .who-we-disc {
+    padding-left: 80px; padding-right: 10px; width: 50%; display: flex; flex-direction: column;
+    justify-content: flex-start; height: 400px; width: 500px;    
+  }  
+  .margin-top-d {
+    margin-top: 30px; text-align: justify;
+  }  
+  .margin-top-b {
+    margin-top: 15px;
+  }  
+  .ours-journey {
+    display: flex; margin-bottom: 50px;
+  }  
+  .journey-type {
+    width: 25%; margin-right: 10%;
+  }  
+  .journey-name {
+    color: #cf701d; font-size: 50px; font-weight: 600; line-height: 50px; margin-bottom: 5px;    
+  }  
+  .margin-page {
+    margin-top: 12%;
+  }  
+  .project-heading {
+    margin-left: auto; margin-right: auto; margin-top: 100px; max-width: 1500px;    
+  }  
+  #projects-content-wrapper {
+    margin: 0 auto; margin-top: 50px; width: 100%;     
+  }  
+  .project-grid {
+    flex-wrap: wrap; display: flex; justify-content: space-around; margin: 0 auto; align-items: center;
+    display: inline-block; text-align: center;    
+  }  
+  .project-items {
+    display: inline-block; margin: 5px; width: calc(33% - 30px);    
+  }  
+  .project-content {
+    position: relative; max-width: 100%;
+  }  
+  .project-details {
+    position: relative; overflow: hidden;
+  }  
+  .project-img {
+    vertical-align: middle; display: inline-block; max-width: 100%;    
+  }  
+  .project-overlay {
+    left: 0%; right: 0%; top: 0%; bottom: 0%; position: absolute; display: flex;
+    justify-content: center; align-items: center; transition: 0.2s; opacity: 0;
+    background-color: rgba(0, 0, 0, 0.3);    
+  }  
+  .project-circle {
+    width: 80px; height: 80px; background-image: linear-gradient(59deg, #eb5653, #d66f15);
+    border-radius: 50%;padding-left: 10px; padding-right: 10px; display: flex; font-size: 10px;
+    align-items: center; justify-content: center; color: white; text-decoration: none;
+    text-transform: uppercase; line-height: 15px; font-weight: 600; text-align: center;
+    letter-spacing: 1px;    
+  }  
+  .project-items:hover .project-overlay,
+  .project-items:hover .project-circle {
+    opacity: 1;
+  }  
+  .together-section {
+    margin-top: 15px; background-color: #f7f8fc;
+  }  
+  .together-content {
+    padding-top: 6%; padding-bottom: 6%; background-size: cover; background-repeat: repeat, no-repeat;
+    background-position: 0px 0px, 50%, 50%; background-attachment: scroll, fixed;
+    background-color: #e9720a;     
+    background-image: linear-gradient(72deg, #e47312, rgba(233, 96, 94, 0.78)),
+      url(https://nuuk-e3eaa.firebaseapp.com/assets/img/banner-2.jpg);
+  }  
+  .title-size {
+    font-size: 45px;
+  }
+  .team-container {
+    max-width: 1500px; width: 100%; margin: 0 auto; margin-top: 50px;    
+  }  
+  .team-grid {
+    display: flex;
+  }  
+  .team-wrapper {
+    width: calc(25% - 16px); padding-left: 8px; padding-right: 8px; position: relative;    
+    margin: 0 auto;
+  }  
+  .team-content {
+    position: relative; width: 95%;
+  }  
+  .person-photo {
+    min-height: 300px; background-size: cover; background-repeat: no-repeat;
+    background-image: url(https://nuuk-e3eaa.firebaseapp.com/assets/img/team-1.jpg);
+    background-position: 50% 0%;    
+  }  
+  .team-desc {
+    padding: 29px 66px 29px 29px; background-color: #fff;
+  }  
+  .name {
+    line-height: 20px;
+  }  
+  .job-title {
+    margin-bottom: 0; color: #bdbdc9; font-size: 16px;
+  }  
+  .social-media-button-section.horizantal {
+    left: auto; top: auto; position: absolute; right: 0; bottom: 0; padding: 10px;
+    background-color: #e47312;    
+  }  
+  .no-border {
+    border-bottom-style: none;
+  }  
+  ._JW {
+    background-image: url(https://nuuk-e3eaa.firebaseapp.com/assets/img/team-2.jpg);
+  }  
+  ._JM {
+    background-image: url(https://nuuk-e3eaa.firebaseapp.com/assets/img/team-3.jpg);
+  }  
+  ._SC {
+    background-image: url(https://nuuk-e3eaa.firebaseapp.com/assets/img/team-4.jpg);
+  }  
+  .testimonial-section {
+    display: flex; align-items: center;
+  }  
+  .testimonial-text {
+    width: 41%; padding-left: 0; padding-right: 50px;    
+  }  
+  .testimonial-details {
+    width: 58.33%; display: flex; padding-left: 10px; padding-right: 10px;    
+  }  
+  .test-details-part {
+    width: 50%; padding-left: 0; padding-right: 0;
+  }  
+  .test-wrapper {
+    display: block; position: relative; width: 80%; padding: 60px 30px 30px; margin: 45px auto 60px;    
+    background-color: #fff; text-align: center;
+  }  
+  .testo-photo {
+    width: 50px; height: 50px; position: relative; border-radius: 100%; color: #fff;
+    margin: -115px auto 25px; opacity: 1; font-size: 60px; display: flex;
+    background-image: linear-gradient(8deg, #ff6361, #e47312);
+    line-height: 80px; justify-content: center; align-items: stretch;
+  }  
+  .photo-block2 {
+    padding-top: 10px;
+  }  
+  .testi-title {
+    font-size: 18px; font-weight: 600; line-height: 18px; margin-top: 10px; margin-bottom: 5px;    
+    text-transform: uppercase;
+  }  
+  .testi-paragraph {
+    font-size: 15px; margin-top: 15px; margin-bottom: 0px; color: #77777a; line-height: 25px;
+  }  
+  .move-down {
+    margin-top: 135px;
+  }  
+  .minus-margin {
+    margin-left: 10px; margin-right: 10px;
+  }  
+  .blog-grid {
+    display: flex; margin-top: 5%;
+  }  
+  .blog-item {
+    width: calc(33.33% - 20px); padding-left: 10px; padding-right: 10px; margin: 0 auto;
+  }  
+  .blog-wrapper {
+    display: flex; flex-direction: column; justify-content: flex-start; align-items: flex-start;
+    background-color: #fff; text-decoration: none; max-width: 100%;
+  }  
+  .blog-img-wrapper {
+    position: relative; background-color: #5c5c5c;
+  }  
+  .blog-img {
+    max-width: 100%; vertical-align: middle; display: inline-block;
+  }  
+  .meta-tag {
+    position: absolute; left: auto; top: 0; right: 0; bottom: auto;
+  }  
+  .meta-number {
+    font-size: 20px; font-weight: 500; display: flex; height: 60px; width: 70px; justify-content: center; align-items: center;    
+    background-image: linear-gradient(45deg, #dd5c5a, #d3721d); color: #fff;    
+  }  
+  .meta-month {
+    font-size: 10px; font-weight: 500; letter-spacing: 2px; height: 40px; width: 70px;
+    background-color: #fff; color: #babac2; text-transform: uppercase; display: flex;
+    justify-content: center; align-items: center;
+  }  
+  .blog-content {
+    width: 100%; padding: 25px 56px 25px 30px; background-color: #e47312;
+    background-image: linear-gradient(158deg, #bb6316, #d4423f);
+  }  
+  .smaller-white-blog {
+    font-size: 15px; margin-right: 0; margin-bottom: 10px; line-height: 22px;
+    text-transform: uppercase;
+  }  
+  .for-blog {
+    font-size: 15px; line-height: 25px; margin-bottom: 0;
+  }  
+  .read-button.for-white {
+    font-size: 10px; display: inline-block; color: #fff; text-transform: uppercase;    
+    letter-spacing: 1px; margin-top: 10px; margin-left: 0; padding-top: 0; padding-bottom: 5px;    
+    position: relative;    
+  }  
+  .read-button {
+    font-weight: 600; overflow: hidden; text-decoration: none;
+  }  
+  .read-button.for-white::after {
+    content: ""; position: absolute; width: 100%; height: 2px; bottom: 0;
+    z-index: 100; transition: 0.2s; background-color: hsla(0, 0%, 100%, 0.3);
+  }  
+  .read-button.for-white:hover::after {
+    content: ""; position: absolute; width: 100%; height: 2px; bottom: 0;
+    z-index: 100; transition: 0.2s; background-color: white;
+  }  
+  .logo-section {
+    padding-top: 5%; padding-bottom: 5%; margin: 0 auto; margin-top: 100px;
+    background-image: linear-gradient(56deg, #e47312, #ff6361); text-align: center;
+  }  
+  .logo-flex {
+    max-width: 1500px; display: flex; margin: 0 auto; align-items: center; position: relative;
+  }  
+  .company-font-size {
+    font-size: 15px; flex: 0 0 auto; order: -1; line-height: 20px; letter-spacing: 1px; 
+  }   
+  .tab-logo {
+    background-size: 100px; width: 20%; max-width: 100%; min-height: 100px;
+    display: inline-block; background-color: transparent; background-repeat: no-repeat;
+    background-position: 50%, 50%; transition: all 500ms ease;
+    text-align: center; margin: 0 auto;
+  }  
+  .logo-1 {
+    background-image: url(https://nuuk-e3eaa.firebaseapp.com/assets/img/logo-1w.png);
+  }  
+  .logo-2 {
+    background-image: url(https://nuuk-e3eaa.firebaseapp.com/assets/img/logo-2w.png);
+  }  
+  .logo-3 {
+    background-image: url(https://nuuk-e3eaa.firebaseapp.com/assets/img/logo-3w.png);
+  }  
+  .logo-4 {
+    background-image: url(https://nuuk-e3eaa.firebaseapp.com/assets/img/logo-4w.png);
+  }  
+  .logo-5 {
+    background-image: url(https://nuuk-e3eaa.firebaseapp.com/assets/img/logo-5w.png);
+  }  
+  footer {
+    padding-left: 50px; padding-right: 50px; padding-top: 60px; margin-left: auto; margin-right: auto;
+    position: relative; width: 85%; z-index: 1; border-top: 1px solid #434555;
+    background-color: #0c183d;
+  }  
+  .footer-content {
+    max-width: 1500px; margin-left: -10px; margin-right: -10px; flex: 1;
+    min-height: 1px; display: flex;
+  }   
+  .footer-item {
+    width: 33%; padding-left: 10px; padding-right: 10px;
+  }   
+  .with-line {
+    position: relative; display: flex; justify-content: flex-start; align-items: center;
+  }   
+  .line {
+    position: absolute; left: 0; top: 8px; right: auto; bottom: auto; width: 100%;
+    height: 1px; background-color: #dd4946;
+  }  
+  .no-display {
+    display: none;
+  }  
+  .in-footer {
+    font-size: 15px; line-height: 15px; margin-top: 0; margin-bottom: 30px; padding-right: 14px; order: -1; 
+    flex: 0 0 auto; background-color: #0a1229; margin-right: 60px; position: relative;
+    z-index: 2;
+  }  
+  ._white1 { 
+    font-size: 15px; color: #fff; line-height: 25px; margin-bottom: 10px;
+  }  
+  .blue {
+    padding-top: 0; margin-top: 0;
+  }  
+  .contact-info.for-white.blue::after {
+    background-color: transparent;
+  }  
+  .contact-info.for-white.blue:hover::after {
+    background-color: white;
+  }  
+  .footer-column {
+    padding-right: 13%;
+  }  
+  .contact-info.for-white.blue.margin_1 {
+    margin-top: 10px;
+  }  
+  .contact-info.for-white.blue {
+    margin-top: 0; margin-bottom: 5px;
+  } 
+  .contact-column {
+    display: flex; flex-direction: column;
+  }   
+  .contact-wrapper {
+    display: flex; flex-direction: column;
+  }  
+  .info-item.horizantal {
+    padding-top: 0px; display: flex; flex-direction: row;
+    justify-content: flex-start; align-items: flex-start; flex: 1;
+  }  
+  .left {
+    margin-right: 13px; margin-bottom: 0px; width: 15px;    
+  }  
+  .new {
+    font-size: 10px; margin-top: 0px; line-height: 15px; letter-spacing: 1px;
+    color: #fff;    
+  }  
+  .phone-no {
+    font-size: 15px; color: hsla(0, 0%, 100%, 0.7); margin-left: 35px; margin-top: 5px;    
+  }  
+  .copyright {
+    margin-top: 50px;
+  }  
+  .bottom-brand {
+    width: 40%;
+  }  
+  .nav-button {
+    display: none;
+  }
